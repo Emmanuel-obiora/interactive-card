@@ -1,0 +1,15 @@
+.app-container{
+    display: grid;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--white);
+}
+
+.app-container::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 38%;
+    background: linear-gradient(to top left, var(--very-dark-violet) 45%, rgb(7, 50, 78) 55%, rgb(78, 4, 78) 65%, var(--very-dark-violet) 80%);
+}

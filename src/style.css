@@ -1,3 +1,8 @@
+footer {
+  margin-top: auto;
+  z-index: 5;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -5,4 +10,172 @@
 
 .attribution a {
   color: hsl(228deg, 45%, 44%);
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  height: auto;
+  padding: 1rem;
+  color: hsl(278deg, 68%, 11%);
+  width: 350px;
+}
+form p {
+  color: hsl(0deg, 100%, 66%);
+  visibility: hidden;
+}
+form .form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+form .form-input > label {
+  font-size: 15px;
+}
+form .form-input > input {
+  width: 100%;
+  height: 2rem;
+  padding: 5px;
+  border-radius: 5px;
+}
+form .card-det {
+  display: flex;
+  gap: 2%;
+  font-size: 14px;
+  width: 100%;
+  align-items: center;
+}
+form .card-det_left {
+  display: block;
+  width: 49%;
+}
+form .card-det_left-info {
+  display: flex;
+  gap: 3%;
+  align-items: center;
+}
+form .card-det_left-info > input {
+  width: 49%;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+form .card-det_right {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+form .card-det_right > input {
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+form > button {
+  width: 100%;
+  background: hsl(278deg, 68%, 11%);
+  color: hsl(279deg, 3%, 87%);
+  height: 2.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.credit-card {
+  width: 30%;
+  height: 100%;
+  display: grid;
+  gap: 1rem;
+}
+.credit-card_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: auto;
+  width: 325px;
+  height: 180px;
+  padding: 0.8rem;
+  background: linear-gradient(to bottom right, hsl(249deg, 99%, 64%) 25%, rgb(223, 53, 223) 40%, rgb(102, 161, 250) 60%, hsl(278deg, 94%, 30%) 80%);
+  border-radius: 5px;
+  position: relative;
+}
+.credit-card_top_circle {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.credit-card_top_circle .circle {
+  color: hsl(279deg, 3%, 87%);
+  font-size: 11px;
+}
+.credit-card_top_circle .first {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  font-size: 22px;
+}
+.credit-card_top .holder {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+  font-size: 25px;
+  color: hsl(279deg, 3%, 87%);
+}
+.credit-card_top .holder_name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+}
+.credit-card_top::before {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 80px;
+  background: linear-gradient(to top right, rgb(102, 161, 250) 20%, hsl(0deg, 100%, 66%));
+  border-radius: 5px;
+  right: 0;
+  top: 0;
+  border: none;
+}
+.credit-card_bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  gap: 0.5rem;
+  width: 325px;
+  height: 180px;
+  padding: 1rem 0;
+  background: hsl(279deg, 3%, 87%);
+  border-radius: 5px;
+  color: hsl(279deg, 3%, 87%);
+}
+.credit-card_bottom .black-label {
+  width: 100%;
+  height: 2rem;
+  background: #000;
+}
+.credit-card_bottom .cvv {
+  background: hsl(279deg, 6%, 55%);
+  width: 85%;
+  text-align: right;
+  padding: 0.4rem;
+  font-size: 15px;
+}
+.credit-card_bottom .extra-details {
+  color: hsl(279deg, 6%, 55%);
+  width: 50%;
+  text-align: center;
+  line-height: 14px;
+  margin-bottom: 1rem;
+  font-size: 15px;
+}
+
+.main {
+  display: flex;
+  gap: 5%;
+  width: 100%;
+  margin-top: 5rem;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
 }

@@ -5,7 +5,7 @@ import '../../style.css'
 
 const main = () => {
 return (
-    <div>
+    <div className="main">
         <CreditCard />
         <CardForm />
     </div>
