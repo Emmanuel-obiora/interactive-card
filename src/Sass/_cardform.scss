@@ -36,6 +36,11 @@ form{
             height: 2.4rem;
             padding: 5px;
             border-radius: 5px;
+            border: 2px solid $light-grayish-violet;
+
+            &:hover{
+                border: 2px solid hsl(272, 73%, 85%);
+            }
         }
     }
 
@@ -62,6 +67,11 @@ form{
                     width: 49%;
                     padding: .4rem;
                     border-radius: 5px;
+                    border: 2px solid $light-grayish-violet;
+
+                    &:hover{
+                        border: 2px solid hsl(272, 73%, 85%);
+                    }
                 }
             }
         }
@@ -75,17 +85,14 @@ form{
             & > input{
                 padding: .4rem;
                 border-radius: 5px;
+                border: 2px solid $light-grayish-violet;
+
+                &:hover{
+                    border: 2px solid hsl(272, 73%, 85%);
+                }
             }
         }
     }
-}
-
-input{
-    border: 2px solid $light-grayish-violet;
-    cursor: pointer;
-}
-input:hover{
-    border: 2px solid hsl(272, 25%, 90%);
 }
 
 .error-message{

@@ -51,6 +51,10 @@ form .form-input > input {
   height: 2.4rem;
   padding: 5px;
   border-radius: 5px;
+  border: 2px solid hsl(279, 3%, 87%);
+}
+form .form-input > input:hover {
+  border: 2px solid hsl(272, 73%, 85%);
 }
 form .card-det {
   display: flex;
@@ -74,6 +78,10 @@ form .card-det_left-info > input {
   width: 49%;
   padding: 0.4rem;
   border-radius: 5px;
+  border: 2px solid hsl(279, 3%, 87%);
+}
+form .card-det_left-info > input:hover {
+  border: 2px solid hsl(272, 73%, 85%);
 }
 form .card-det_right {
   display: flex;
@@ -84,15 +92,10 @@ form .card-det_right {
 form .card-det_right > input {
   padding: 0.4rem;
   border-radius: 5px;
-}
-
-input {
   border: 2px solid hsl(279, 3%, 87%);
-  cursor: pointer;
 }
-
-input:hover {
-  border: 2px solid hsl(272, 25%, 90%);
+form .card-det_right > input:hover {
+  border: 2px solid hsl(272, 73%, 85%);
 }
 
 .error-message {
@@ -154,7 +157,7 @@ input:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 10px 30px 6px rgba(175, 173, 173, 0.4);
+  box-shadow: 15px 30px 6px rgba(175, 173, 173, 0.4);
 }
 @media (max-width: 37.5rem) {
   .credit-card_top {
