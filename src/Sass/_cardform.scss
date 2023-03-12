@@ -4,11 +4,19 @@ form{
     display: grid;
     position: relative;
 
+    @media(max-width: 37.5rem){
+        width: 320px;
+    }
+
     .form-container{
         display: grid;
         gap: 1rem;
         height: auto;
         padding: 1rem;
+
+        @media(max-width: 37.5rem){
+            padding: 0;
+        }
     }
 
     .form-input{
@@ -16,6 +24,8 @@ form{
         display: flex;
         flex-direction: column;
         font-size: 15px;
+        gap: .4rem;
+        text-transform: uppercase;
 
         & > label{
             font-size: 15px;
@@ -23,7 +33,7 @@ form{
 
         & > input{
             width: 100%;
-            height: 2rem;
+            height: 2.4rem;
             padding: 5px;
             border-radius: 5px;
         }
@@ -34,11 +44,14 @@ form{
         gap: 2%;
         font-size: 14px;
         width: 100%;
+        text-transform: uppercase;
         // align-items: center;
 
         &_left{
-            display: block;
+            display: flex;
+            flex-direction: column;
             width: 49%;
+            gap: .4rem;
 
             &-info{
                 display: flex;
@@ -57,6 +70,7 @@ form{
             display: flex;
             flex-direction: column;
             width: 49%;
+            gap: .4rem;
 
             & > input{
                 padding: .4rem;
@@ -70,7 +84,7 @@ input{
     border: 2px solid $light-grayish-violet;
     cursor: pointer;
 }
-input:active{
+input:hover{
     border: 2px solid hsl(272, 25%, 90%);
 }
 
@@ -83,7 +97,7 @@ input:active{
     width: 100%;
     background: $very-dark-violet;
     color: $light-grayish-violet;
-    height: 2.2rem;
+    height: 2.3rem;
     border-radius: 5px;
     cursor: pointer;
 }

@@ -10,7 +10,7 @@
     content: "";
     position: absolute;
     height: 100%;
-    width: 38%;
+    width: 470px;
     background: url('./images/bg-main-desktop.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -18,7 +18,13 @@
 }
 
 @media screen and (max-width: 37.5rem){
+    .app-container{
+        justify-content: center;
+    }
     .app-container::before{
+        width: 320px;
+        height: 250px;
+        top: 0;
         background: url('./images/bg-main-mobile.png');
     }
 }

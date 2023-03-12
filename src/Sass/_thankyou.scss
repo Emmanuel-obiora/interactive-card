@@ -12,6 +12,10 @@
 
     & > img{
         max-width: 20%;
+
+        @media(max-width: 37.5rem){
+            max-width: 30%;
+        }
     }
 
     &_head{
@@ -19,12 +23,23 @@
         letter-spacing: 1px;
         margin-top: .5rem;
         color: $very-dark-violet;
+
+        @media(max-width: 37.5rem){
+            font-size: 25px;
+            letter-spacing: 3px;
+            margin-top: 1rem;
+        }
     }
 
     &_info{
         font-size: 13px;
         color: $dark-greyish-violet;
         margin-bottom: 1rem;
+
+        @media(max-width: 37.5rem){
+            font-size: 13.5px;
+            letter-spacing: 1px;
+        }
     }
 }
 

@@ -19,24 +19,36 @@ form {
   display: grid;
   position: relative;
 }
+@media (max-width: 37.5rem) {
+  form {
+    width: 320px;
+  }
+}
 form .form-container {
   display: grid;
   gap: 1rem;
   height: auto;
   padding: 1rem;
 }
+@media (max-width: 37.5rem) {
+  form .form-container {
+    padding: 0;
+  }
+}
 form .form-input {
   width: 100%;
   display: flex;
   flex-direction: column;
   font-size: 15px;
+  gap: 0.4rem;
+  text-transform: uppercase;
 }
 form .form-input > label {
   font-size: 15px;
 }
 form .form-input > input {
   width: 100%;
-  height: 2rem;
+  height: 2.4rem;
   padding: 5px;
   border-radius: 5px;
 }
@@ -45,10 +57,13 @@ form .card-det {
   gap: 2%;
   font-size: 14px;
   width: 100%;
+  text-transform: uppercase;
 }
 form .card-det_left {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 49%;
+  gap: 0.4rem;
 }
 form .card-det_left-info {
   display: flex;
@@ -64,6 +79,7 @@ form .card-det_right {
   display: flex;
   flex-direction: column;
   width: 49%;
+  gap: 0.4rem;
 }
 form .card-det_right > input {
   padding: 0.4rem;
@@ -75,7 +91,7 @@ input {
   cursor: pointer;
 }
 
-input:active {
+input:hover {
   border: 2px solid hsl(272, 25%, 90%);
 }
 
@@ -88,7 +104,7 @@ input:active {
   width: 100%;
   background: hsl(278, 68%, 11%);
   color: hsl(279, 3%, 87%);
-  height: 2.2rem;
+  height: 2.3rem;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -116,6 +132,14 @@ input:active {
   gap: 1rem;
   z-index: 5;
 }
+@media (max-width: 37.5rem) {
+  .credit-card {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 0;
+  }
+}
 .credit-card_top {
   display: flex;
   flex-direction: column;
@@ -130,6 +154,15 @@ input:active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 10px 30px 6px rgba(175, 173, 173, 0.4);
+}
+@media (max-width: 37.5rem) {
+  .credit-card_top {
+    width: 270px;
+    height: 150px;
+    z-index: 5;
+    top: -4.1rem;
+  }
 }
 .credit-card_top_circle > img {
   max-width: 20%;
@@ -140,6 +173,11 @@ input:active {
   width: 100%;
   font-size: 25px;
   color: hsl(279, 3%, 87%);
+}
+@media (max-width: 37.5rem) {
+  .credit-card_top .holder {
+    font-size: 22px;
+  }
 }
 .credit-card_top .holder_name {
   display: flex;
@@ -162,11 +200,23 @@ input:active {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 37.5rem) {
+  .credit-card_bottom {
+    width: 270px;
+    height: 150px;
+  }
+}
 .credit-card_bottom .cvv {
   position: absolute;
   right: 2rem;
   top: 5rem;
   font-size: 15px;
+}
+@media (max-width: 37.5rem) {
+  .credit-card_bottom .cvv {
+    top: 4rem;
+    font-size: 13px;
+  }
 }
 
 .main {
@@ -176,6 +226,15 @@ input:active {
   margin-top: 5rem;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 37.5rem) {
+  .main {
+    flex-direction: column;
+    width: 320px;
+    gap: 0;
+    margin-top: 2rem;
+    align-self: center;
+  }
 }
 
 .thank-you {
@@ -193,16 +252,34 @@ input:active {
 .thank-you > img {
   max-width: 20%;
 }
+@media (max-width: 37.5rem) {
+  .thank-you > img {
+    max-width: 30%;
+  }
+}
 .thank-you_head {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 0.5rem;
   color: hsl(278, 68%, 11%);
 }
+@media (max-width: 37.5rem) {
+  .thank-you_head {
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin-top: 1rem;
+  }
+}
 .thank-you_info {
   font-size: 13px;
   color: hsl(279, 6%, 55%);
   margin-bottom: 1rem;
+}
+@media (max-width: 37.5rem) {
+  .thank-you_info {
+    font-size: 13.5px;
+    letter-spacing: 1px;
+  }
 }
 
 .show-thanks {
