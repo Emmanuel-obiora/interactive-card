@@ -12,7 +12,6 @@ This is a solution to the [Interactive card details form challenge on Frontend M
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -34,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/Emmanuel-obiora/interactive-card-details-form)
-- Live Site URL: [GitHub Pages](https://emmanuel-obiora.github.io/interactive-card-details-form)
+- Solution URL: [GitHub](https://github.com/Emmanuel-obiora/interactive-card)
+- Live Site URL: [GitHub Pages](https://emmanuel-obiora.github.io/interactive-card)
 
 ## My process
 
