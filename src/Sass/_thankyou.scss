@@ -1,0 +1,33 @@
+.thank-you{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    row-gap: .5rem;
+    width: 300px;
+    z-index: 150;
+    padding: 1rem;
+    background: transparent;
+    align-items: center;
+    place-self: center;
+
+    & > img{
+        max-width: 20%;
+    }
+
+    &_head{
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: .5rem;
+        color: $very-dark-violet;
+    }
+
+    &_info{
+        font-size: 13px;
+        color: $dark-greyish-violet;
+        margin-bottom: 1rem;
+    }
+}
+
+.show-thanks{
+    display: flex;
+}

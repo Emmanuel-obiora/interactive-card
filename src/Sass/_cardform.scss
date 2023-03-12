@@ -1,14 +1,14 @@
 form{
-    display: grid;
-    gap: 1rem;
-    height: auto;
-    padding: 1rem;
     color: $very-dark-violet;
     width: 350px;
+    display: grid;
+    position: relative;
 
-    & p{
-        color: $error-message;
-        visibility: hidden;
+    .form-container{
+        display: grid;
+        gap: 1rem;
+        height: auto;
+        padding: 1rem;
     }
 
     .form-input{
@@ -34,7 +34,7 @@ form{
         gap: 2%;
         font-size: 14px;
         width: 100%;
-        align-items: center;
+        // align-items: center;
 
         &_left{
             display: block;
@@ -64,13 +64,43 @@ form{
             }
         }
     }
+}
 
-    & > button{
-        width: 100%;
-        background: $very-dark-violet;
-        color: $light-grayish-violet;
-        height: 2.2rem;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+input{
+    border: 2px solid $light-grayish-violet;
+    cursor: pointer;
+}
+input:active{
+    border: 2px solid hsl(272, 25%, 90%);
+}
+
+.error-message{
+    color: $error-message;
+    display: none;
+}
+
+.sub-btn{
+    width: 100%;
+    background: $very-dark-violet;
+    color: $light-grayish-violet;
+    height: 2.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hide-form{
+    visibility: hidden;
+}
+
+// Adding error message to invalid and incorrect form fields
+.section-error > input{
+    border: 2px solid $error-message;
+}
+
+.section-error .error-message{
+    display: block;
+}
+
+.special-error{
+    border: 2px solid $error-message;
 }

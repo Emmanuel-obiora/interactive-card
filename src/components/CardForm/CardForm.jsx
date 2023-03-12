@@ -1,39 +1,160 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../style.css'
+import Logo from '../../images/card-logo.svg'
+import ThankYou from '../../components/ThankYou/ThankYou'
 
 const CardForm = () => {
-return (
-    <div>
-        <form action="submit" autocomplete="off">
-            <div className="form-input">
-                <label htmlFor="fullName">Cardholder Name</label>
-                <input id="fullName" type="text" placeholder='e.g. Jane Appleseed'required />
-                <p className='error-message'>Can't be blank</p>
-            </div>
-            <div className="form-input">
-                <label htmlFor="cardNumber">Card Number</label>
-                <input id="cardNumber" type="tel" maxLength={16} placeholder='e.g. 1234 5678 9123 0000' required pattern='[0-9]'/>
-                <p className='error-message'>Can't be blank</p>
-            </div>
-            <div className="card-det">
-                <div className="card-det_left">
-                    <label htmlFor="month">Exp. Date (MM/YY)</label>
-                    <div className='card-det_left-info' id="month">
-                        <input type="tel" maxLength={2} placeholder='MM' />
-                        <input type="tel" maxLength={2} placeholder='YY' />
-                    </div>
-                    <p className='error-message'>Can't be blank</p>
-                </div>
+    const [info, setInfo] = useState({
+        fullname: '',
+        cardNumber: '',
+        cardMonth: '',
+        cardYear: '',
+        cardCvv: ''
+    });
 
-                <div className="card-det_right">
-                    <label htmlFor="Cvv">CVV</label>
-                    <input type="tel" id="Cvv" maxLength={3} placeholder='e.g 123' />
-                    <p className='error-message'>Can't be blank</p>
+    const handleChangeForm = (e) => {
+        e.preventDefault();
+        setInfo({
+            ...info, [e.target.name]: e.target.value
+        });
+    }
+
+    function newCards(){
+
+            if(info.fullname === ""){
+                const disError = document.getElementById('fullName').parentNode;
+    
+                disError.classList.add('section-error');
+            } else {
+                const disError = document.getElementById('fullName').parentNode;
+                disError.classList.remove('section-error');
+            }
+    
+            if(info.cardNumber === ""){
+                const disError = document.getElementById('CardNumber').parentNode;
+    
+                disError.classList.add('section-error');
+            } else{
+                const disError = document.getElementById('CardNumber').parentNode;
+    
+                disError.classList.remove('section-error');
+            }
+    
+            if(info.cardMonth === "" || info.cardYear === ""){
+                const disError = document.getElementById('cardMth').parentNode.parentNode;
+                disError.classList.add('section-error');
+                
+                if(info.cardMonth === ""){
+                    const errBox = document.getElementById('cardMth');
+    
+                    errBox.classList.add('special-error');
+                } else{
+                    const errBox = document.getElementById('cardMth');
+    
+                    errBox.classList.remove('special-error');
+                }
+    
+                if(info.cardYear === ""){
+                    const errBox = document.getElementById('cardYr');
+    
+                    errBox.classList.add('special-error');
+                } else {
+                    const errBox = document.getElementById('cardYr');
+    
+                    errBox.classList.remove('special-error');
+                }
+            } else {
+                const disError = document.getElementById('cardMth').parentNode.parentNode;
+                const errBox2 = document.getElementById('cardYr');
+                const errBox1 = document.getElementById('cardMth');
+    
+                errBox1.classList.remove('special-error');
+                errBox2.classList.remove('special-error');
+                disError.classList.remove('section-error');
+            }
+    
+            if(info.cardCvv === ""){
+                const disError = document.getElementById('Cvv').parentNode;
+    
+                disError.classList.add('section-error');
+            } else {
+                const disError = document.getElementById('Cvv').parentNode;
+    
+                disError.classList.remove('section-error');
+            }
+            
+        if(info.fullname!=="" && info.cardNumber!=="" && info.cardMonth!=="" && info.cardYear!=="" && info.cardCvv!==""){
+            const Modal = document.getElementById('Modal');
+            const Thanks = document.getElementById('Thanks');
+            const hideForm = document.getElementById('hideForm');
+    
+            Modal.classList.add('show-modal');
+            Thanks.classList.add('show-thanks');
+            hideForm.classList.add('hide-form');
+        }
+        
+
+    }
+
+return (
+    <main className="main">
+        <div className="credit-card">
+            <div className="credit-card_top">
+                <div className='credit-card_top_circle'>
+                    <img src={Logo} alt="logo" />
+                </div>
+                <div className="holder">
+                    <span>{info.cardNumber}</span>
+                    <div className='holder_name'>
+                        <span className='holder_name-client'>{info.fullname}</span>
+                        <div className='exp-date'>
+                            <span >{info.cardMonth}</span>/
+                            <span >{info.cardYear}</span>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
-            <button type='submit'>Confirm</button>
+
+            <div className="credit-card_bottom">
+                <span className='cvv'>{info.cardCvv}</span>
+            </div>
+        </div>
+
+        <form action="submit" autoComplete="off">
+            <div id="hideForm" className='form-container'>
+                <div className="form-input">
+                    <label htmlFor="fullName">Cardholder Name</label>
+                    <input id="fullName" type="text" name="fullname" onChange={handleChangeForm} placeholder='e.g. Jane Appleseed' />
+                    <p className='error-message'>Can't be blank</p>
+                </div>
+                <div className="form-input">
+                    <label htmlFor="cardNumber">Card Number</label>
+                    <input id="CardNumber" type="tel" name="cardNumber" value={info.cardNumber.replace(/\s/g, "").replace(/(\d{4})/g, "$1 ").trim()} maxLength={19} onChange={handleChangeForm} placeholder='e.g. 1234 5678 9123 0000' />
+                    <p className='error-message'>Can't be blank</p>
+                </div>
+                <div className="card-det">
+                    <div className="card-det_left">
+                        <label htmlFor="month">Exp. Date (MM/YY)</label>
+                        <div className='card-det_left-info' id="month">
+                            <input type="tel" id='cardMth' name="cardMonth" maxLength={2} onChange={handleChangeForm} placeholder='MM' />
+                            <input type="tel" id='cardYr' name="cardYear" maxLength={2} onChange={handleChangeForm} placeholder='YY' />
+                        </div>
+                        <p className='error-message'>Can't be blank</p>
+                    </div>
+
+                    <div className="card-det_right">
+                        <label htmlFor="Cvv">CVV</label>
+                        <input type="tel" id="Cvv" name="cardCvv" maxLength={3} onChange={handleChangeForm} placeholder='e.g 123' />
+                        <p className='error-message'>Can't be blank</p>
+                    </div>
+                </div>
+                <button type='button' id="cardsN" className='sub-btn' onClick={newCards}>Confirm</button>
+            </div>
+            
+            <ThankYou />
         </form>
-    </div>
+    </main>
 )
 }
 

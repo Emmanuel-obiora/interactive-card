@@ -3,6 +3,7 @@
     height: 100%;
     display: grid;
     gap: 1rem;
+     z-index: 5;
 
     &_top{
         display: flex;
@@ -12,27 +13,15 @@
         width: 325px;
         height: 180px;
         padding: .8rem;
-        background: linear-gradient(to bottom right, $light-blue 25%,rgb(223, 53, 223) 40%, rgb(102, 161, 250) 60%, $light-violet 80%);
         border-radius: 5px;
         position: relative;
+        background-image: url('/src/images/bg-card-front.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-        &_circle{
-            display: flex;
-            gap: .5rem;
-            align-items: center;
-
-            .circle{
-                color: $light-grayish-violet;
-                font-size: 11px;
-
-            }
-
-            .first{
-                background: $white;
-                color: $white;
-                border-radius: 50%;
-                font-size: 22px;
-            }
+        &_circle > img{
+            max-width: 20%;
         }
 
         .holder{
@@ -47,55 +36,30 @@
                 align-items: center;
                 justify-content: space-between;
                 font-size: 11px;
+
+                &-client{
+                    text-transform: uppercase;
+                }
             }
         }
     }
-    &_top::before{
-        content: "";
-        position: absolute;
-        height: 70px;
-        width: 80px;
-        background: linear-gradient(to top right, rgb(102, 161, 250) 20%, $error-message);
-        border-radius: 5px;
-        right: 0;
-        top: 0;
-        border: none;
-    }
 
     &_bottom{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+        position: relative;
         margin-left: auto;
-        gap: .5rem;
         width: 325px;
         height: 180px;
-        padding: 1rem 0;
-        background: $light-grayish-violet;
         border-radius: 5px;
         color: $light-grayish-violet;
-
-        .black-label{
-            width: 100%;
-            height: 2rem;
-            background: #000;
-        }
+        background-image: url('/src/images/bg-card-back.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         .cvv{
-            background: $dark-greyish-violet;
-            width: 85%;
-            text-align: right;
-            padding: .4rem;
-            font-size: 15px;
-        }
-
-        .extra-details{
-            color: $dark-greyish-violet;
-            width: 50%;
-            text-align: center;
-            line-height: 14px;
-            margin-bottom: 1rem;
+            position: absolute;
+            right: 2rem;
+            top: 5rem;
             font-size: 15px;
         }
     }
