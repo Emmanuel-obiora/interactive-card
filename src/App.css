@@ -22,8 +22,8 @@
         justify-content: center;
     }
     .app-container::before{
-        width: 320px;
-        height: 250px;
+        width: 100%;
+        height: 240px;
         top: 0;
         background: url('./images/bg-main-mobile.png');
     }
