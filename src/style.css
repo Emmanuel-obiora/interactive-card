@@ -174,11 +174,14 @@ form .card-det_right > input:hover {
   display: grid;
   gap: 0.5rem;
   width: 100%;
-  font-size: 25px;
   color: hsl(279, 3%, 87%);
+  height: 5rem;
+}
+.credit-card_top .holder > h1 {
+  font-size: 25px;
 }
 @media (max-width: 37.5rem) {
-  .credit-card_top .holder {
+  .credit-card_top .holder > h1 {
     font-size: 22px;
   }
 }
@@ -186,7 +189,7 @@ form .card-det_right > input:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 12px;
 }
 .credit-card_top .holder_name-client {
   text-transform: uppercase;

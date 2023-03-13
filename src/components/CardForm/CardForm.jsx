@@ -104,7 +104,7 @@ return (
                     <img src={Logo} alt="logo" />
                 </div>
                 <div className="holder">
-                    <span>{info.cardNumber}</span>
+                    <h1>{info.cardNumber}</h1>
                     <div className='holder_name'>
                         <span className='holder_name-client'>{info.fullname}</span>
                         <div className='exp-date'>
