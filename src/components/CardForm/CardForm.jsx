@@ -125,27 +125,27 @@ return (
             <div id="hideForm" className='form-container'>
                 <div className="form-input">
                     <label htmlFor="fullName">Cardholder Name</label>
-                    <input id="fullName" type="text" name="fullname" onChange={handleChangeForm} placeholder='e.g. Jane Appleseed' />
+                    <input id="fullName" className='card-input' type="text" name="fullname" onChange={handleChangeForm} placeholder='e.g. Jane Appleseed' />
                     <p className='error-message'>Can't be blank</p>
                 </div>
                 <div className="form-input">
-                    <label htmlFor="cardNumber">Card Number</label>
-                    <input id="CardNumber" type="tel" name="cardNumber" value={info.cardNumber.replace(/\s/g, "").replace(/(\d{4})/g, "$1 ").trim()} maxLength={19} onChange={handleChangeForm} placeholder='e.g. 1234 5678 9123 0000' />
+                    <label htmlFor="CardNumber">Card Number</label>
+                    <input id="CardNumber" className='card-input' type="tel" name="cardNumber" value={info.cardNumber.replace(/\s/g, "").replace(/(\d{4})/g, "$1 ").trim()} maxLength={19} onChange={handleChangeForm} placeholder='e.g. 1234 5678 9123 0000' />
                     <p className='error-message'>Can't be blank</p>
                 </div>
                 <div className="card-det">
                     <div className="card-det_left">
-                        <label htmlFor="month">Exp. Date (MM/YY)</label>
+                        <label htmlFor="cardMth">Exp. Date (MM/YY)</label>
                         <div className='card-det_left-info' id="month">
-                            <input type="tel" id='cardMth' name="cardMonth" maxLength={2} onChange={handleChangeForm} placeholder='MM' />
-                            <input type="tel" id='cardYr' name="cardYear" maxLength={2} onChange={handleChangeForm} placeholder='YY' />
+                            <input type="tel" id='cardMth' className='card-input' name="cardMonth" maxLength={2} onChange={handleChangeForm} placeholder='MM' />
+                            <input type="tel" id='cardYr' className='card-input' name="cardYear" maxLength={2} onChange={handleChangeForm} placeholder='YY' />
                         </div>
                         <p className='error-message'>Can't be blank</p>
                     </div>
 
                     <div className="card-det_right">
                         <label htmlFor="Cvv">CVV</label>
-                        <input type="tel" id="Cvv" name="cardCvv" maxLength={3} onChange={handleChangeForm} placeholder='e.g 123' />
+                        <input type="tel" className='card-input' id="Cvv" name="cardCvv" maxLength={3} onChange={handleChangeForm} placeholder='e.g 123' />
                         <p className='error-message'>Can't be blank</p>
                     </div>
                 </div>

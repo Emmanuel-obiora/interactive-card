@@ -114,7 +114,7 @@ form{
 }
 
 // Adding error message to invalid and incorrect form fields
-.section-error > input{
+.section-error .card-input{
     border: 2px solid $error-message;
 }
 

@@ -16,12 +16,12 @@ const ThankYou = () => {
        }
 
     return (
-        <div className='thank-you' id="Thanks">
+        <article className='thank-you' id="Thanks">
             <img src={complete} alt="icon-complete" />
-            <strong className='thank-you_head'>Thank you!</strong>
-            <small className='thank-you_info'>We've added your card details</small>
+            <h1 className='thank-you_head'>Thank you!</h1>
+            <p className='thank-you_info'>We've added your card details</p>
             <button type='button' className='sub-btn' onClick={removeMessage}>Continue</button>
-        </div>
+        </article>
     )
 }
 

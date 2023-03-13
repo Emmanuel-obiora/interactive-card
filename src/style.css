@@ -116,7 +116,7 @@ form .card-det_right > input:hover {
   visibility: hidden;
 }
 
-.section-error > input {
+.section-error .card-input {
   border: 2px solid hsl(0, 100%, 66%);
 }
 
