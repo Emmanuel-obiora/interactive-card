@@ -61,8 +61,6 @@ const [info, setInfo] = useState({
         cardYear: '',
         cardCvv: ''
     });
-
-}
 ```
 
 ### Continued development
